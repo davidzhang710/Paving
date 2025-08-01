@@ -1,4 +1,4 @@
-import React, {useCallback, useEffect, useRef, useState} from 'react';
+import React, {useCallback, useEffect, useRef, useState,useMemo} from 'react';
 import {Alert, Animated, Linking, StyleSheet} from 'react-native';
 
 import {
@@ -65,7 +65,7 @@ const DrawerContent = (
   props: DrawerContentComponentProps,
 ) => {
   const {navigation} = props;
-  const {t} = useTranslation();
+  const {t, locale} = useTranslation();
   const {isDark, handleIsDark} = useData();
   const [active, setActive] = useState('Home');
   const {assets, colors, gradients, sizes} = useTheme();
@@ -83,16 +83,14 @@ const DrawerContent = (
   const handleWebLink = useCallback((url: string) => Linking.openURL(url), []);
 
   // screen list for Drawer menu
-  const screens = [
+  const screens = useMemo(() => [
     {name: t('screens.home'), to: 'Home', icon: assets.home},
     {name: t('screens.components'), to: 'Components', icon: assets.components},
-    {name: t('screens.articles'), to: 'Articles', icon: assets.document},
-    {name: t('screens.rental'), to: 'Pro', icon: assets.rental},
-    {name: t('screens.profile'), to: 'Profile', icon: assets.profile},
+    // {name: t('screens.articles'), to: 'Articles', icon: assets.document},
+//     {name: t('screens.profile'), to: 'Profile', icon: assets.profile},
     {name: t('screens.settings'), to: 'Pro', icon: assets.settings},
     {name: t('screens.register'), to: 'Register', icon: assets.register},
-    {name: t('screens.extra'), to: 'Pro', icon: assets.extras},
-  ];
+  ],[locale]);
 
   return (
     <DrawerContentScrollView
@@ -115,8 +113,8 @@ const DrawerContent = (
             <Text size={12} semibold>
               {t('app.name')}
             </Text>
-            <Text size={12} semibold>
-              {t('app.native')}
+            <Text size={12} color={colors.text} opacity={0.5}>
+              版本号码
             </Text>
           </Block>
         </Block>
@@ -166,46 +164,8 @@ const DrawerContent = (
           {t('menu.documentation')}
         </Text>
 
-        <Button
-          row
-          justify="flex-start"
-          marginTop={sizes.sm}
-          marginBottom={sizes.s}
-          onPress={() =>
-            handleWebLink('https://github.com/creativetimofficial')
-          }>
-          <Block
-            flex={0}
-            radius={6}
-            align="center"
-            justify="center"
-            width={sizes.md}
-            height={sizes.md}
-            marginRight={sizes.s}
-            gradient={gradients.white}>
-            <Image
-              radius={0}
-              width={14}
-              height={14}
-              color={colors.black}
-              source={assets.documentation}
-            />
-          </Block>
-          <Text p color={labelColor}>
-            {t('menu.started')}
-          </Text>
-        </Button>
 
-        <Block row justify="space-between" marginTop={sizes.sm}>
-          <Text color={labelColor}>{t('darkMode')}</Text>
-          <Switch
-            checked={isDark}
-            onPress={(checked) => {
-              handleIsDark(checked);
-              Alert.alert(t('pro.title'), t('pro.alert'));
-            }}
-          />
-        </Block>
+
       </Block>
     </DrawerContentScrollView>
   );

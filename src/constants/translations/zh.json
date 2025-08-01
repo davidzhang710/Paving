@@ -1,0 +1,118 @@
+{
+  "common": {
+    "appDetails": "应用详情",
+    "appName": "应用名称",
+    "appVersion": "应用版本",
+    "buildVersion": "构建版本",
+    "expoVersion": "Expo 版本",
+    "about": "关于",
+    "visit": "访问",
+    "posted": "发布于 {{date}}",
+    "recommended": "为你推荐",
+    "viewall": "查看全部",
+    "more": "更多",
+    "follow": "关注",
+    "followed": "已关注",
+    "search": "搜索",
+    "night": "夜间",
+    "day": "白天",
+    "booknow": "立即预订",
+    "selectDate": "选择日期",
+    "checkInOut": "入住与退房",
+    "adults": "成人",
+    "roomType": "房型",
+    "luxury": "豪华",
+    "message": "输入你的消息",
+    "album": "相册",
+    "or": "或",
+    "name": "姓名",
+    "namePlaceholder": "请输入您的全名",
+    "email": "邮箱",
+    "emailPlaceholder": "请输入您的邮箱地址",
+    "password": "密码",
+    "passwordPlaceholder": "请输入密码",
+    "agree": "我同意",
+    "terms": "条款和条件",
+    "signup": "注册",
+    "signin": "登录",
+    "goBack": "返回",
+    "inStock": "有库存",
+    "outStock": "无库存",
+    "addToCart": "加入购物车",
+    "checkout": "去结账",
+    "readArticle": "阅读全文",
+    "send": "发送",
+    "guests": {
+      "one": "1 位客人",
+      "other": "{{count}} 位客人",
+      "zero": "0 位客人"
+    }
+  },
+  "app": {
+    "name": "公司名称",
+    "fullname": "软 UI 套件",
+    "native": "React Native",
+    "link": "creative-tim.com"
+  },
+  "darkMode": "深色模式",
+  "screens": {
+    "home": "主页",
+    "components": "组件",
+    "articles": "文章",
+    "rental": "租赁",
+    "profile": "个人资料",
+    "settings": "设置",
+    "register": "注册账户",
+    "extra": "附加 - 汽车"
+  },
+  "navigation": {
+    "home": "铺路公司",
+    "components": "组件",
+    "articles": "软 UI",
+    "rentals": "软 UI",
+    "rental": "最佳优惠",
+    "booking": "预订",
+    "chat": "聊天",
+    "profile": "个人资料",
+    "settings": "设置",
+    "notifications": "通知",
+    "agreement": "用户协议",
+    "about": "关于",
+    "privacy": "隐私政策",
+    "register": "注册",
+    "login": "登录",
+    "extra": "汽车",
+    "shopping": "购物车"
+  },
+  "menu": {
+    "started": "快速开始",
+    "documentation": "文档"
+  },
+  "home": {
+    "title": "软 UI",
+    "following": "关注",
+    "trending": "趋势"
+  },
+  "register": {
+    "title": "欢迎",
+    "subtitle": "注册方式"
+  },
+  "profile": {
+    "title": "个人资料",
+    "posts": "帖子",
+    "followers": "粉丝",
+    "following": "关注中",
+    "aboutMe": "关于我"
+  },
+  "pro": {
+    "title": "软 UI 专业版",
+    "alert": "该功能仅在专业版中提供",
+    "components": "• {{count}} 个组件（按钮、输入框、卡片等）",
+    "screens": "• {{count}} 个屏幕（购物、通知、聊天等）",
+    "support": "• 包括专业支持",
+    "takeAdvantage": "利用所有 React Native 编码的功能和屏幕",
+    "appTemplate": "Soft UI PRO 是一款创新的应用模板，可帮助你快速构建出色的移动应用。",
+    "saveTime": "这个现代化模板让你从原型到成品节省大量时间，所有组件都已实现。",
+    "buyNow": "立即购买"
+  }
+}

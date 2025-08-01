@@ -13,7 +13,10 @@ export default () => {
 
   /* set the status bar based on isDark constant */
   useEffect(() => {
-    Platform.OS === 'android' && StatusBar.setTranslucent(true);
+      if (Platform.OS === 'android') {
+        StatusBar.setTranslucent(false); // optional
+        StatusBar.setBackgroundColor(theme.colors.white); // or COLORS.primary
+      }
     StatusBar.setBarStyle(isDark ? 'light-content' : 'dark-content');
     return () => {
       StatusBar.setBarStyle('default');
@@ -56,6 +59,7 @@ export default () => {
 
   return (
     <TranslationProvider>
+
       <ThemeProvider theme={theme} setTheme={setTheme}>
         <NavigationContainer theme={navigationTheme}>
           <Menu />

@@ -2,15 +2,15 @@
   "expo": {
     "name": "rn-soft-ui-kit-free",
     "slug": "rn-soft-ui-kit-free",
-    "description": "React Native - Soft UI Kit - Free",
-    "primaryColor": "#CB0C9F",
+    "description": "Paving Project",
+    "primaryColor": "#252f40",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
     "splash": {
       "image": "./assets/splash.png",
       "resizeMode": "cover",
-      "backgroundColor": "#CB0C9F"
+      "backgroundColor": "#252f40"
     },
     "updates": {
       "fallbackToCacheTimeout": 0
@@ -22,9 +22,10 @@
       "supportsTablet": true
     },
     "android": {
+      "package": "com.chase.rnsoftuikitfree",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#CB0C9F"
+        "backgroundColor": "#252f40"
       }
     },
     "web": {

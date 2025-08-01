@@ -14,7 +14,8 @@ export const COLORS: ThemeColors = {
 
   // base colors
   /** UI color for #primary */
-  primary: '#CB0C9F',
+  //primary: '#CB0C9F',
+  primary: '#252F40',
   /** UI color for #secondary */
   secondary: '#627594', // '#8392AB',
   /** UI color for #tertiary */
@@ -50,7 +51,8 @@ export const COLORS: ThemeColors = {
   overlay: 'rgba(0,0,0,0.3)',
 
   /** UI color for input borderColor on focus */
-  focus: '#E293D3',
+  // focus: '#E293D3',
+  focus: '#252F40',
   input: '#252F40',
 
   /** UI color for switch checked/active color */
@@ -77,7 +79,7 @@ export const COLORS: ThemeColors = {
 };
 
 export const GRADIENTS: ThemeGradients = {
-  primary: ['#FF0080', '#7928CA'],
+  primary: ['#3A416F', '#141727'],
   secondary: ['#A8B8D8', '#627594'],
   info: ['#21D4FD', '#2152FF'],
   success: ['#98EC2D', '#17AD37'],
